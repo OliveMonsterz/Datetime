@@ -1,2 +1,2 @@
 # Datetime
-http://olivemonsterz.github.io/CountdownHNY/
+http://olivemonsterz.github.io/Datetime/
