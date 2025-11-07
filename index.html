@@ -1,0 +1,373 @@
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://olivemonsterz.github.io/Widget_Notion/satangemoji1.css" rel="stylesheet">
+    <link href="https://olivemonsterz.github.io/Widget_Notion/Fontmaewmedium.css" rel="stylesheet">
+    <link href="https://olivemonsterz.github.io/Widget_Notion/Rainytime.css" rel="stylesheet">
+    <link href="https://olivemonsterz.github.io/Widget_Notion/Peony.css" rel="stylesheet">
+    <link href="https://olivemonsterz.github.io/Widget_Notion/TCS4Surprise.css" rel="stylesheet">
+    <link href="https://olivemonsterz.github.io/Widget_Notion/itgood.css" rel="stylesheet">
+
+
+  <title>Date</title>
+  
+  <style>
+body {
+      background: transparent*;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      display: flex;             /* ใช้ flex จัดกลาง */
+      justify-content: center;   /* จัดกลางแนวนอน */
+      align-items: center;       /* จัดกลางแนวตั้ง */
+      user-select: none;         /* ห้ามลากเลือกข้อความ */
+      opacity: 1;                /* ยังมองเห็นปกติ */
+    }
+
+    /* ส่วนหัว + ปุ่มอยู่บรรทัดเดียวกัน */
+    .clock {
+      color: #292623;
+      display: block;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text {
+      font-family: 'Rainytime';
+      font-size: 40px;
+      font-weight: 500;
+      color: #333;
+      text-align: center;
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow: visible;
+      z-index: 8;
+      cursor:default;
+      letter-spacing: 1.5px;
+    }
+
+   /* ===== กล่องแสดงผล Countdown ===== */
+    .time-container {
+      display: flex;
+      flex-direction: row;
+      height: 70px;     /* กำหนดความสูง */
+      /*transform: translateY(-10px);*/
+      align-items: center;
+      /*gap: 15px;*/
+      transform: translateY(-28px);
+    }
+
+    .time-box1 {
+      width: 30px;      /* กำหนดความกว้าง */
+      height: 100px;     /* กำหนดความสูง */
+      align-items: center;
+      justify-content: center;
+      /*border: 1px solid;*/
+    }
+
+    .time-box2 {
+      width: 100px;      /* กำหนดความกว้าง */
+      height: 100px;     /* กำหนดความสูง */
+      align-items: center;
+      justify-content: center;
+      /*border: 1px solid;*/
+    }
+
+    .numbers {
+      font-family: 'TCS4Surprise';
+      font-size: 4.9em;/*78.4px*/
+      /*transform: translateY(-25px); */
+      text-align: center;
+    }
+
+    .dot {
+      font-family: 'TCS4Surprise';
+      font-size: 4.9em;/*78.4px*/
+      /*transform: translateX(-9px);*/
+      text-align: center;
+    }
+
+    .numbers::after {
+      content: "";
+      margin-left: -2px;  /* ลบช่องว่างสุดท้ายออก */
+    }
+
+    .containeris {
+      display: grid;
+      width: 30px; 
+      /*align-content: center;*/
+      align-items: center; 
+      transform: translateY(26px);
+      text-align: center;   /* 🔹 จัดกลางตัวเลขในแต่ละช่อง */
+    }
+
+    .space {
+      display: grid;
+      width: 7px; 
+      /*align-content: center;*/
+      align-items: center; 
+      transform: translateY(26px);
+      text-align: center;   /* 🔹 จัดกลางตัวเลขในแต่ละช่อง */
+    }
+    
+    #icon {
+      font-family: 'satangemoji1';
+      font-size: 30px;
+      display: inline-block;
+      color: #70757a;      
+      text-align: center; 
+      align-self: end;
+      margin-top: 5px;
+    }
+    
+    #status {
+      font-family: 'Fontmaewmedium';
+      display: inline-block;
+      text-align: start;
+      font-size: 30px;
+      color: #70757a;  
+      margin-top: -10px;
+    }
+
+    #date {
+      font-family: 'Rainytime';
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 7px;
+      letter-spacing: 1.5px;
+      transform: translateY(-15px);
+    }
+
+/* Small screens (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .clock {
+     top: 30%;
+     left: 50%;
+     transform: translate(-50%, -30%);
+  }
+  
+  .text {
+    font-size: 30px;
+  }
+
+  .time-container {
+    transform: translateY(-15px);
+  }
+
+  .time-box1 {
+    width: 20px;      /* กำหนดความกว้าง */
+    }
+
+  .time-box2 {
+    width: 65px;      /* กำหนดความกว้าง */
+    }
+
+  .numbers,.dot {
+    font-size: 45px;
+  }
+  
+  .containeris {
+    transform: translateY(0px);
+  }
+
+  .space {
+    width: 3px; 
+    transform: translateY(24px);
+  }
+
+  #icon {
+    font-size: 24px;
+    text-align: center;
+  }
+    
+  #status {
+    font-size: 24px;
+  }
+  
+  #date {
+   font-size: 30px;
+   transform: translateY(-40px);
+  }
+}
+
+/* Medium screens (tablets, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .clock {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+  .time-container {
+    transform: translateY(-15px);
+  }
+
+    .time-box1 {
+    width: 20px;      /* กำหนดความกว้าง */
+    }
+
+  .time-box2 {
+    width: 80px;      /* กำหนดความกว้าง */
+    }
+
+  .numbers,.dot {
+    font-size: 55px;
+  }
+
+  .containeris {
+    transform: translateY(10px);
+  }
+
+  .space {
+    width: 2px; 
+    transform: translateY(24px);
+  }
+
+  #icon {
+    font-size: 28px;
+  }
+    
+  #status {
+    font-size: 28px;
+  }
+
+   #date {
+    font-size: 38px;
+    transform: translateY(-25px);
+  }
+}
+
+/* Large screens (desktops, 768px and up) */
+@media only screen and (min-width: 769px) {
+  .clock {
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .numbers,.dot {
+    font-size: 70px;
+  }
+}
+
+   </style>
+
+   </head>
+   <body>
+    <!-- ===== Header ===== -->
+    <div class="clock">
+      <span class="text" id="day"></span>
+
+    <!-- ===== Countdown ===== -->
+    <div class="time-container">
+      <div class="time-box2">
+          <div id="hours" class="numbers">00</div>
+      </div>
+      
+            <div class="time-box1">
+          <div class="dot">:</div>
+      </div>
+
+      <div class="time-box2">
+          <div id="minutes" class="numbers">00</div>
+      </div>
+
+       <div class="time-box1">
+          <div class="dot">:</div>
+      </div>
+
+      <div class="time-box2">
+          <div id="seconds" class="numbers">00</div>
+      </div>
+      <div class="space"></div>
+            <div class="containeris">
+          <span id="icon"></span>
+          <span id="status"></span>
+    </div> 
+  </div>
+    <div id="date"></div>
+  </div>
+
+
+
+ <script>
+
+function updateClock() {
+      var date = new Date();
+      var estDate = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' }));
+      var hrs = estDate.getHours();
+      var hours = twelveHour(hrs);
+      var minutes = estDate.getMinutes();
+      var seconds = estDate.getSeconds();
+
+      // เติมเลข 0 ข้างหน้า
+      hours = hours < 10 ? '0' + hours : hours;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      // กำหนด AM/PM
+      var period = hrs >= 12 ? 'PM' : 'AM';
+
+
+
+      
+      // ไอคอนกลางวัน/กลางคืน
+      var icon = (hrs >= 6 && hrs <= 18) ? 'B' : 'C';
+
+      // แสดงผลแยก
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
+      document.getElementById('status').textContent = period;
+      document.getElementById('icon').textContent = icon;
+
+      // วันที่
+      var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      var dayOfWeek = daysOfWeek[estDate.getDay()];
+      var monthName = months[estDate.getMonth()];
+      var day = estDate.getDate();
+      var year = estDate.getFullYear();
+
+      document.getElementById('day').textContent = dayOfWeek;
+      document.getElementById('date').textContent = `${day} ${monthName} ${year}`;
+
+  // === เปลี่ยนสีข้อความตามวัน ===
+  const colorMap = {
+    Sunday: '#ff4d4d',     // แดง
+    Monday: '#ffd633',     // เหลือง
+    Tuesday: '#ff66b2',    // ชมพู
+    Wednesday: '#33cc33',  // เขียว
+    Thursday: '#ff9933',   // ส้ม
+    Friday: '#3399ff',     // ฟ้า
+    Saturday: '#9966ff'    // ม่วง
+  };
+
+  const color = colorMap[dayOfWeek];
+
+  // เปลี่ยนสีให้หลายส่วนพร้อมกัน
+  document.querySelector('.text').style.color = color;
+  document.getElementById('date').style.color = color;
+  document.querySelectorAll('.numbers, .dot, #status, #icon').forEach(el => {
+    el.style.color = color;
+  });
+
+      function twelveHour(hour) {
+        if (hour > 12) return hour - 12;
+        if (hour === 0) return 12;
+        return hour;
+      }
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // เรียกครั้งแรกทันที
+  </script>
+
+</body>
+</html>
