@@ -12,7 +12,7 @@
   
   <style>
 body {
-      background: transparent*;
+      background: transparent/*#292623*/;
       height: 100vh;
       margin: 0;
       display: flex;
@@ -144,154 +144,162 @@ body {
 
 /* Small screens (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .clock {
-     top: 30%;
-     left: 50%;
-     transform: translate(-50%, -30%);
-  }
+    .clock {
+      width: 250px;
+      height: 120px;   
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+    }
   
-  .text {
-    font-size: 30px;
-  }
-
-  .time-container {
-    transform: translateY(-15px);
-  }
-
-  .time-box1 {
-    width: 20px;      /* กำหนดความกว้าง */
+    .text {
+      font-size: 30px;
     }
 
-  .time-box2 {
-    width: 65px;      /* กำหนดความกว้าง */
+    .time-container {
+      transform: translateY(-15px);
     }
 
-  .numbers,.dot {
-    font-size: 45px;
-  }
+    .time-box1 {
+      width: 20px;      /* กำหนดความกว้าง */
+    }
+
+    .time-box2 {
+      width: 65px;      /* กำหนดความกว้าง */
+    }
+
+    .numbers,.dot {
+      font-size: 45px;
+    }
   
-  .containeris {
-    transform: translateY(0px);
-  }
+    .containeris {
+      transform: translateY(0px);
+    }
 
-  .space {
-    width: 3px; 
-    transform: translateY(24px);
-  }
+    .space {
+      width: 3px; 
+      transform: translateY(24px);
+    }
 
-  #icon {
-    font-size: 24px;
-    text-align: center;
-  }
+    #icon {
+      font-size: 24px;
+      text-align: center;
+    }
     
-  #status {
-    font-size: 24px;
-  }
+    #status {
+      font-size: 24px;
+    }
   
-  #date {
-   font-size: 30px;
-   transform: translateY(-40px);
-  }
+    #date {
+    font-size: 30px;
+    transform: translateY(-40px);
+    }
 }
 
 /* Medium screens (tablets, 600px to 768px) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  .clock {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-  .time-container {
-    transform: translateY(-15px);
-  }
+    .clock {
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+    }
+
+    .time-container {
+      transform: translateY(-15px);
+    }
 
     .time-box1 {
-    width: 20px;      /* กำหนดความกว้าง */
+      width: 20px;      /* กำหนดความกว้าง */
     }
 
-  .time-box2 {
-    width: 80px;      /* กำหนดความกว้าง */
+    .time-box2 {
+      width: 80px;      /* กำหนดความกว้าง */
     }
 
-  .numbers,.dot {
-    font-size: 55px;
-  }
+    .numbers,.dot {
+      font-size: 55px;
+    }
 
-  .containeris {
-    transform: translateY(10px);
-  }
+    .containeris {
+      transform: translateY(10px);
+    }
 
-  .space {
-    width: 2px; 
-    transform: translateY(24px);
-  }
+    .space {
+      width: 2px; 
+      transform: translateY(24px);
+    }
 
-  #icon {
-    font-size: 28px;
-  }
+    #icon {
+      font-size: 28px;
+    }
     
-  #status {
-    font-size: 28px;
-  }
+    #status {
+      font-size: 28px;
+    }
 
-   #date {
-    font-size: 38px;
-    transform: translateY(-25px);
-  }
+    #date {
+      font-size: 38px;
+      transform: translateY(-25px);
+    }
 }
 
 /* Large screens (desktops, 768px and up) */
 @media only screen and (min-width: 769px) {
-  .clock {
-    padding: 50px;
-    font-size: 20px;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    .clock {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-  .numbers,.dot {
-    font-size: 70px;
-  }
+    .numbers,.dot {
+      font-size: 70px;
+    }
 }
+
 
    </style>
 
    </head>
    <body>
-    <!-- ===== Header ===== -->
-    <div class="clock">
-      <span class="text" id="day"></span>
+    
+  <div class="clock">
 
-    <!-- ===== Countdown ===== -->
+    <!-- ===== Day ===== -->
+    <span class="text" id="day"></span>
+
+    <!-- ===== Time ===== -->
     <div class="time-container">
       <div class="time-box2">
-          <div id="hours" class="numbers">00</div>
+      <div id="hours" class="numbers">00</div>
       </div>
       
-            <div class="time-box1">
-          <div class="dot">:</div>
+      <div class="time-box1">
+      <div class="dot">:</div>
       </div>
 
       <div class="time-box2">
-          <div id="minutes" class="numbers">00</div>
+      <div id="minutes" class="numbers">00</div>
       </div>
 
        <div class="time-box1">
-          <div class="dot">:</div>
+      <div class="dot">:</div>
       </div>
 
       <div class="time-box2">
-          <div id="seconds" class="numbers">00</div>
+      <div id="seconds" class="numbers">00</div>
       </div>
+
       <div class="space"></div>
-            <div class="containeris">
-          <span id="icon"></span>
-          <span id="status"></span>
-    </div> 
-  </div>
+
+      <div class="containeris">
+        <span id="icon"></span>
+        <span id="status"></span>
+      </div> 
+    </div>
+
+    <!-- ===== Date ===== -->
     <div id="date"></div>
+
   </div>
 
 
@@ -358,12 +366,213 @@ function updateClock() {
     el.style.color = color;
   });
 
-      function twelveHour(hour) {
-        if (hour > 12) return hour - 12;
-        if (hour === 0) return 12;
-        return hour;
-      }
+
+ // === Snow วันที่ 24 และ 25 ธันวาคม ===
+  if (estDate.getMonth() === 11 && (estDate.getDate() === 24 || estDate.getDate() === 25)) {
+    startSnow();
+  }
+
+  // === Fireworks วันที่ 1 มกราคม ===
+  if (estDate.getMonth() === 0 && estDate.getDate() === 1) {
+    startFireworks();
+  }
+
+  function twelveHour(hour) {
+    if (hour > 12) return hour - 12;
+    if (hour === 0) return 12;
+    return hour;
+  }
+}
+
+// === หิมะตก ===
+let snowStarted = false;
+function startSnow() {
+  if (snowStarted) return;
+  snowStarted = true;
+
+  const snowContainer = document.createElement("div");
+  snowContainer.style.position = "fixed";
+  snowContainer.style.top = 0;
+  snowContainer.style.left = 0;
+  snowContainer.style.width = "100%";
+  snowContainer.style.height = "100%";
+  snowContainer.style.pointerEvents = "none";
+  snowContainer.style.overflow = "hidden";
+  snowContainer.style.zIndex = 9999;
+  document.body.appendChild(snowContainer);
+
+  for (let i = 0; i < 40; i++) {
+    const snowflake = document.createElement("div");
+    snowflake.textContent = "❄";
+    snowflake.style.position = "absolute";
+    snowflake.style.color = "#b3e5fc"; // สีหิมะ
+    snowflake.style.fontSize = Math.random() * 14 + 10 + "px";
+    snowflake.style.left = Math.random() * 100 + "%";
+    snowflake.style.top = -Math.random() * 50 + "px";
+    snowflake.style.opacity = Math.random();
+    snowflake.style.animation = `fall ${5 + Math.random() * 5}s linear infinite`;
+    snowflake.style.animationDelay = Math.random() * 5 + "s";
+    snowContainer.appendChild(snowflake);
+  }
+
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
     }
+  `;
+  document.head.appendChild(style);
+}
+
+// === ดอกไม้ไฟ ===
+let fireworksStarted = false;
+
+function startFireworks() {
+  if (fireworksStarted) return;
+  fireworksStarted = true;
+
+  // 🟣 สร้าง Canvas พื้นหลังโปร่งใส
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.style.position = "fixed";
+  canvas.style.top = 0;
+  canvas.style.left = 0;
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.style.pointerEvents = "none";
+  canvas.style.zIndex = "0"; // อยู่หลังข้อความ
+  document.body.appendChild(canvas);
+
+  let w, h;
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resize);
+  resize();
+
+  // === ดอกไม้ไฟ ===
+  const fireworks = [];
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function Firework() {
+    this.x = random(w * 0.2, w * 0.8);
+    this.y = h;
+    this.targetY = random(h * 0.3, h * 0.6);
+    this.color = `hsl(${random(0, 360)},100%,70%)`;
+    this.particles = [];
+    this.exploded = false;
+    this.speed = random(3, 6);
+  }
+
+  Firework.prototype.update = function () {
+    if (!this.exploded) {
+      this.y -= this.speed;
+      if (this.y <= this.targetY) {
+        this.exploded = true;
+        for (let i = 0; i < 35; i++) {
+          this.particles.push({
+            x: this.x,
+            y: this.y,
+            angle: random(0, 2 * Math.PI),
+            speed: random(1, 5),
+            alpha: 1
+          });
+        }
+      }
+    } else {
+      this.particles.forEach((p) => {
+        p.x += Math.cos(p.angle) * p.speed;
+        p.y += Math.sin(p.angle) * p.speed + 0.3;
+        p.alpha -= 0.02;
+      });
+      this.particles = this.particles.filter((p) => p.alpha > 0);
+    }
+  };
+
+  Firework.prototype.draw = function () {
+    if (!this.exploded) {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    } else {
+      this.particles.forEach((p) => {
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+    }
+  };
+
+  // === ประกายไฟรอบนาฬิกา ===
+  const sparks = [];
+  const clockElement = document.querySelector(".clock");
+
+  function createSpark() {
+    const rect = clockElement.getBoundingClientRect();
+    const x = rect.left + rect.width / 2 + random(-rect.width / 2 - 50, rect.width / 2 + 50);
+    const y = rect.top + rect.height / 2 + random(-rect.height / 2 - 40, rect.height / 2 + 40);
+    sparks.push({
+      x,
+      y,
+      size: random(1, 3),
+      alpha: 1,
+      color: `hsl(${random(0, 360)},100%,75%)`,
+      vy: random(-0.5, -1)
+    });
+  }
+
+  function updateSparks() {
+    if (Math.random() < 0.2) createSpark();
+    sparks.forEach((s) => {
+      s.y += s.vy;
+      s.alpha -= 0.02;
+    });
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      if (sparks[i].alpha <= 0) sparks.splice(i, 1);
+    }
+  }
+
+  function drawSparks() {
+    sparks.forEach((s) => {
+      ctx.globalAlpha = s.alpha;
+      ctx.fillStyle = s.color;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.size, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  // === วาดภาพทั้งหมด ===
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+
+    // ดอกไม้ไฟ
+    if (Math.random() < 0.04) fireworks.push(new Firework());
+    fireworks.forEach((f) => {
+      f.update();
+      f.draw();
+    });
+
+    // ประกายไฟ
+    updateSparks();
+    drawSparks();
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+
 
     setInterval(updateClock, 1000);
     updateClock(); // เรียกครั้งแรกทันที
